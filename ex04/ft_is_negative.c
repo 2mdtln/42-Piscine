@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtaheri <mtaheri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/07 06:49:17 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/07 07:06:32 by mtaheri          ###   ########.fr       */
+/*   Created: 2025/11/07 06:56:28 by mtaheri           #+#    #+#             */
+/*   Updated: 2025/11/07 07:12:34 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putchar(char c)
 {
-	int	z;
+	write(1, &c, 1);
+}
 
-	z = '0';
-	while (z <= '9')
+void	ft_is_negative(int n)
+{
+	if (n < 0)
 	{
-		write(1, &z, 1);
-		z++;
+		ft_putchar('N');
+	}
+	else
+	{
+		ft_putchar('P');
 	}
 }

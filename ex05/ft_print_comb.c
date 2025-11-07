@@ -1,25 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtaheri <mtaheri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/07 06:49:17 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/07 07:06:32 by mtaheri          ###   ########.fr       */
+/*   Created: 2025/11/07 09:50:16 by mtaheri           #+#    #+#             */
+/*   Updated: 2025/11/07 11:49:53 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_print_comb(void)
 {
-	int	z;
+	int x;
+	int y;
+	int z;
 
-	z = '0';
-	while (z <= '9')
+	x = '0';
+	while (x <= '7')
 	{
-		write(1, &z, 1);
-		z++;
+		y = x + 1;
+		while (y <= '8')
+		{
+			z = y + 1;
+			while (z <= '9')
+			{
+				write(1, &x, 1);
+				write(1, &y, 1);
+				write(1, &z, 1);
+				if (!(x == '7' && y == '8' && z == '9'))
+				{
+					write(1, ", ", 2);
+				}
+				z++;
+			}
+			y++;
+		}
+		x++;
 	}
+}
+
+int	main(void)
+{
+	ft_print_comb();
+	return (0);
 }
