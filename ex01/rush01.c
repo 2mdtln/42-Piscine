@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtaheri <mtaheri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: usolak <usolak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 17:33:37 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/09 04:05:30 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/09 10:15:53 by usolak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ft_putstarline(int w)
 
 	z = w;
 	ft_putchar('*');
-	while (w - 2 >= 0)
+	while (w - 2 >= 1)
 	{
 		ft_putchar(' ');
 		w--;
