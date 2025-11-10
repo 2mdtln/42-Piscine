@@ -1,39 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtaheri <mtaheri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/07 09:50:16 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/10 18:21:47 by mtaheri          ###   ########.fr       */
+/*   Created: 2025/11/10 18:03:00 by mtaheri           #+#    #+#             */
+/*   Updated: 2025/11/10 18:21:41 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_comb(void)
+void	ft_putchar(char c)
 {
-	char	x[3];
+	write(1, &c, 1);
+}
 
-	x[0] = '0';
-	while (x[0] <= '7')
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		x[1] = x[0] + 1;
-		while (x[1] <= '8')
-		{
-			x[2] = x[1] + 1;
-			while (x[2] <= '9')
-			{
-				write(1, &x, 3);
-				if (!(x[0] == '7' && x[1] == '8' && x[2] == '9'))
-				{
-					write(1, ", ", 2);
-				}
-				x[2]++;
-			}
-			x[1]++;
-		}
-		x[0]++;
+		write(1, "-", 1);
+		write(1, "214748", 6);
+		write(1, "3648", 4);
 	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(-nb);
+	}
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else if (nb <= 9)
+	{
+		ft_putchar(nb + 48);
+	}
+}
+
+int	main(void)
+{
+	ft_putnbr(-2147483648);
+	return (0);
 }
