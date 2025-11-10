@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 18:03:00 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/10 18:21:41 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/10 18:23:53 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,4 @@ void	ft_putnbr(int nb)
 	{
 		ft_putchar(nb + 48);
 	}
-}
-
-int	main(void)
-{
-	ft_putnbr(-2147483648);
-	return (0);
 }
