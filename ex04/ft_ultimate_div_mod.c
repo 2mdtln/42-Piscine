@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 09:24:23 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/12 23:26:26 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/13 09:42:51 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int	y;
 	int	z;
 
-	y = *a / *b;
-	z = *a % *b;
-	*a = y;
-	*b = z;
+	z = *a;
+	*a = z / *b;
+	*b = z % *b;
 }
 
 /*
