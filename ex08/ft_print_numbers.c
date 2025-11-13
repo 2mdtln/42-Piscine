@@ -6,11 +6,11 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 09:08:27 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/13 14:21:33 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/13 18:07:40 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
+#include <unistd.h>
 
 void	ft_swap(int *a, int *b)
 {
@@ -51,15 +51,21 @@ void	ft_putchar(char c)
 
 int	main()
 {
-	int z[3] = {6, 1, 9};
+	int z[6] = {6, 1, 9, 3, 6, 2};
 	ft_putchar(z[0] + 48); 
 	ft_putchar(z[1] + 48);
 	ft_putchar(z[2] + 48);
+	ft_putchar(z[3] + 48);
+	ft_putchar(z[4] + 48);
+	ft_putchar(z[5] + 48);
 	ft_putchar(' ');
-	ft_rev_int_tab(z, 3);
+	ft_rev_int_tab(z, 6);
 	ft_putchar(z[0] + 48);
 	ft_putchar(z[1] + 48);
 	ft_putchar(z[2] + 48);
+	ft_putchar(z[3] + 48);
+	ft_putchar(z[4] + 48);
+	ft_putchar(z[5] + 48);
 	ft_putchar('\n');
 	return 0;
 }
