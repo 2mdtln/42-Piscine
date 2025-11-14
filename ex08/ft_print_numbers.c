@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 09:08:27 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/13 18:07:40 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/14 20:53:22 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	ft_swap(int *a, int *b)
 
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int z;
-	int m;
+	int	z;
+	int	m;
 
 	z = 0;
 	m = 0;
@@ -32,9 +32,9 @@ void	ft_rev_int_tab(int *tab, int size)
 	{
 		while (m < size - z -1)
 		{
-			if (tab[m] > tab[m+1])
+			if (tab[m] > tab[m + 1])
 			{
-				ft_swap(&tab[m], &tab[m+1]);
+				ft_swap(&tab[m], &tab[m + 1]);
 			}
 			m++;
 		}
