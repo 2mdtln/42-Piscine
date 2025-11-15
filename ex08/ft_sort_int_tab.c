@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtaheri <mtaheri@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 09:08:27 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/14 20:53:22 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/15 03:04:14 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_swap(int *a, int *b)
 	*b = z;
 }
 
-void	ft_rev_int_tab(int *tab, int size)
+void	ft_sort_int_tab(int *tab, int size)
 {
 	int	z;
 	int	m;
