@@ -6,22 +6,19 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 11:54:04 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 11:54:30 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 12:40:36 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
+#include <unistd.h>
 
 int	ft_str_is_lowercase(char *str)
 {
-	int	x;
-
-	x = 0;
-	while (str[x])
+	while (*str)
 	{
-		if (!((str[x] >= 'a' && str[x] <= 'z')))
+		if (!((*str >= 'a' && *str <= 'z')))
 			return (0);
-		x++;
+		str++;
 	}
 	return (1);
 }

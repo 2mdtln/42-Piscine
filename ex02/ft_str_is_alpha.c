@@ -6,23 +6,20 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 09:06:21 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 11:52:30 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 12:31:49 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
+#include <unistd.h>
 
 int	ft_str_is_alpha(char *str)
 {
-	int	x;
-
-	x = 0;
-	while (str[x])
+	while (*str)
 	{
-		if (!((str[x] >= 'a' && str[x] <= 'z')
-				|| (str[x] >= 'A' && str[x] <= 'Z')))
+		if (!((*str >= 'a' && *str <= 'z')
+				|| (*str >= 'A' && *str <= 'Z')))
 			return (0);
-		x++;
+		str++;
 	}
 	return (1);
 }
