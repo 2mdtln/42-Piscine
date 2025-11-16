@@ -6,7 +6,7 @@
 /*   By: ahmbasar <ahmbasar@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 15:41:05 by ahmbasar          #+#    #+#             */
-/*   Updated: 2025/11/16 20:41:09 by ahmbasar         ###   ########.fr       */
+/*   Updated: 2025/11/16 20:48:05 by ahmbasar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,23 @@
 
 void	p_map(char (*map)[SIZE][SIZE])
 {
-	int	i;
+	int	line;
+	int	col;
 
-	i = 0;
-	while (i < AREA)
+	line = 0;
+	while (line < 4)
 	{
-		if (((i % SIZE) == 0) && i)
-			write(1, "\n", 1);
-		write(1, &(*map)[i / SIZE][i % SIZE], 1);
-		if ((i % SIZE) != 3)
-			write(1, " ", 1);
-		i++;
+		col = 0;
+		while (col < 4)
+		{
+			write(1, &(*map)[line][col], 1);
+			if (col != 3)
+				write(1, " ", 1);
+			col++;
+		}
+		write(1, "\n", 1);
+		line++;
 	}
-	write(1, "\n", 1);
 }
 
 int	check_dup_y(char c1, char c2, char c3, char c4)
@@ -87,14 +91,3 @@ int	check(char (*surround)[4][SIZE], char (*map)[SIZE][SIZE])
 	}
 	return (SUCCESS);
 }
-
-// void	p_surround(char (*arr)[4][SIZE])
-// {
-// 	for (int i = 0; i < SURROUND; i++)
-// 	{
-// 		printf("-%d- ", (*arr)[i / SIZE][i % SIZE] - '0');
-// 		if ((i % SIZE) == 3)
-// 			printf("\n");
-// 	}
-// 	printf("\n");
-// }
