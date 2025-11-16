@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 13:15:02 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 15:09:01 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 16:03:55 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-
+/*
 #include <unistd.h>
 
 void	ft_putstr(char *str)
@@ -47,4 +47,4 @@ int	main(void)
 	ft_putstr(s1);
     return 0;
 }
-
+*/

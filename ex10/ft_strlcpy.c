@@ -6,10 +6,9 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 14:34:57 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 15:36:06 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 16:06:38 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {

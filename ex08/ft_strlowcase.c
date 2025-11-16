@@ -6,13 +6,13 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 13:11:40 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 14:29:56 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 16:05:47 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
-	const char *pstr = str;
+	const char	*pstr = str;
 
 	while (*str)
 	{
