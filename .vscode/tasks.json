@@ -10,6 +10,7 @@
                 "-g",
                 "main.c",
                 "utilize.c",
+                "check.c",
                 "-o",
                 "${fileDirname}/a.out"
             ],
