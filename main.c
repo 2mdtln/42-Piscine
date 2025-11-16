@@ -3,7 +3,7 @@
 #define SIZE		4
 #define SURROUND	(SIZE) * 4 // define ici define norm
 
-void	init_arg(int (*arr)[4][SIZE], char *str)
+void	init_arg(char (*arr)[4][SIZE], char *str)
 {
 	int	i;
 
@@ -17,7 +17,7 @@ void	init_arg(int (*arr)[4][SIZE], char *str)
 
 // void	prepare()
 
-void	p(int (*arr)[4][SIZE]){
+void	p(char (*arr)[4][SIZE]){
 	for (size_t i = 0; i < SURROUND; i++)
 	{
 		printf("-%d- ", (*arr)[i / SIZE][i % SIZE] - '0');

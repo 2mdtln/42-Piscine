@@ -34,6 +34,7 @@
 			"type": "lldb",
 			"request": "launch",
 			"name": "lldb",
+			"preLaunchTask": "build1",
 			"program": "${workspaceFolder}/main",
 			"args": ["4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2"],
 			"cwd": "${workspaceFolder}"
