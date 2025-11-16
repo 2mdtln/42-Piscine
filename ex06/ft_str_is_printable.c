@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 12:10:52 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 12:39:06 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 12:56:03 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_str_is_printable(char *str)
 {
 	while (*str)
 	{
-		if (!((*str >= 32 && *str <= 126)))
+		if (!(*str >= 32 && *str <= 126))
 			return (0);
 		str++;
 	}

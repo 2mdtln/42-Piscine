@@ -1,38 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_str_is_numeric.c                               :+:      :+:    :+:    */
+/*   ft_strlcpy.c                                      :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 0005/11/16 11:45:53 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 14:46:38 by mtaheri         ###   ########.fr        */
+/*   Created: 2025/11/16 14:34:57 by mtaheri          #+#    #+#              */
+/*   Updated: 2025/11/16 15:36:06 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	while (*str)
+	unsigned int	x;
+	unsigned int	y;
+
+	x = 0;
+	y = 0;
+	while (src[x])
+		x++;
+	if (size == 0)
+		return (x);
+	while (src[y] && y < size - 1)
 	{
-		if (!(*str >= '0' && *str <= '9'))
-			return (0);
-		str++;
+		dest[y] = src[y];
+		y++;
 	}
-	return (1);
+	dest[y] = '\0';
+	return (x);
 }
 
 /*
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write(1, &c, 1);
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
 }
 
 int	main(void)
 {
-    char s1[] = "3";
-	ft_putchar(ft_str_is_numeric(s1) + 48);
+    char s1[] = "Hello Z!";
+    char s2[50];  
+    ft_strlcpy(s2, s1, 5);
+
+    ft_putstr(s1);
+    ft_putstr("\n");
+    ft_putstr(s2);
     return 0;
 }
 */

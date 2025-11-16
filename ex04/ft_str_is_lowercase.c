@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 11:54:04 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 12:40:36 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 12:56:12 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_str_is_lowercase(char *str)
 {
 	while (*str)
 	{
-		if (!((*str >= 'a' && *str <= 'z')))
+		if (!(*str >= 'a' && *str <= 'z'))
 			return (0);
 		str++;
 	}

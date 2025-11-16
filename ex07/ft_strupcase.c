@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_str_is_numeric.c                               :+:      :+:    :+:    */
+/*   ft_strupcase.c                                    :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 0005/11/16 11:45:53 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 14:46:38 by mtaheri         ###   ########.fr        */
+/*   Created: 2025/11/16 12:41:21 by mtaheri          #+#    #+#              */
+/*   Updated: 2025/11/16 14:09:22 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+char	*ft_strupcase(char *str)
 {
 	while (*str)
 	{
-		if (!(*str >= '0' && *str <= '9'))
-			return (0);
+		if (*str >= 'a' && *str <= 'z')
+			*str -= 32;
 		str++;
 	}
-	return (1);
+	return (str);
 }
 
 /*
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write(1, &c, 1);
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
 }
 
 int	main(void)
 {
-    char s1[] = "3";
-	ft_putchar(ft_str_is_numeric(s1) + 48);
+    char s1[] = "abc";
+	ft_strupcase(s1);
+	ft_putstr(s1);
     return 0;
 }
 */

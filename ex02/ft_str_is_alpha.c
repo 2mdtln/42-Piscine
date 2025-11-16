@@ -6,11 +6,9 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 09:06:21 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 12:31:49 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 14:46:29 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -25,6 +23,8 @@ int	ft_str_is_alpha(char *str)
 }
 
 /*
+v#include <unistd.h>
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);

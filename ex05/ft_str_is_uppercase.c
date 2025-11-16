@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 12:10:06 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 12:35:19 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 12:56:07 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_str_is_uppercase(char *str)
 {
 	while (*str)
 	{
-		if (!((*str >= 'A' && *str <= 'Z')))
+		if (!(*str >= 'A' && *str <= 'Z'))
 			return (0);
 		str++;
 	}

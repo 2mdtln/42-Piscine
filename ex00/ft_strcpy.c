@@ -6,11 +6,9 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 09:06:03 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 09:11:14 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 14:46:15 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -27,6 +25,8 @@ char	*ft_strcpy(char *dest, char *src)
 }
 
 /*
+#include <unistd.h>
+
 void	ft_putstr(char *str)
 {
 	while (*str)

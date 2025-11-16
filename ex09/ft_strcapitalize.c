@@ -1,38 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_str_is_numeric.c                               :+:      :+:    :+:    */
+/*   ft_strcapitalize.c                                :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 0005/11/16 11:45:53 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 14:46:38 by mtaheri         ###   ########.fr        */
+/*   Created: 2025/11/16 13:15:02 by mtaheri          #+#    #+#              */
+/*   Updated: 2025/11/16 15:09:01 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+char	*ft_strcapitalize(char *str)
+{
+	int	x;
+
+	x = 0;
+	while (str[x])
+	{
+		if (x == 0)
+			if (str[x] >= 'a' && str[x] <= 'z')
+				str[x] -= 32;
+		if (str[x] == ' ' || str[x] == '-' || str[x] == '+')
+			if (str[x + 1] >= 'a' && str[x + 1] <= 'z')
+				str[x + 1] -= 32;
+		x++;
+	}
+	return (str);
+}
+
+
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
 	while (*str)
 	{
-		if (!(*str >= '0' && *str <= '9'))
-			return (0);
+		write(1, str, 1);
 		str++;
 	}
-	return (1);
-}
-
-/*
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
 }
 
 int	main(void)
 {
-    char s1[] = "3";
-	ft_putchar(ft_str_is_numeric(s1) + 48);
+    char s1[] = "hi, how are you? 42words forty-two; fifty+and+one";
+	ft_strcapitalize(s1);
+	ft_putstr(s1);
     return 0;
 }
-*/
+

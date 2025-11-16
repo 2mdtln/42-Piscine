@@ -6,11 +6,9 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr+#+  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2025/11/16 09:06:18 by mtaheri          #+#    #+#              */
-/*   Updated: 2025/11/16 11:56:49 by mtaheri         ###   ########.fr        */
+/*   Updated: 2025/11/16 14:46:06 by mtaheri         ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -27,6 +25,8 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 }
 
 /*
+#include <unistd.h>
+
 void	ft_putstr(char *str)
 {
 	while (*str)
@@ -38,10 +38,9 @@ void	ft_putstr(char *str)
 
 int	main(void)
 {
-	char	s1[8];
+	char	s1[8] = "Hello Z!";
 	char	s2[50];
 
-	s1[0] = "Hello Z!";
 	ft_strncpy(s2, s1, 4);
 	ft_putstr(s1);
 	ft_putstr("\n");
