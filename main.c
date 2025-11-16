@@ -6,7 +6,7 @@
 /*   By: ahmbasar <ahmbasar@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 15:41:06 by ahmbasar          #+#    #+#             */
-/*   Updated: 2025/11/16 20:38:24 by ahmbasar         ###   ########.fr       */
+/*   Updated: 2025/11/16 20:58:03 by ahmbasar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	set_row(char const *perm, char *row)
 		row[i] = perm[i];
 }
 
-void	combinator(int max_24[4], char (*map)[SIZE][SIZE], char (*arr)[4][SIZE])
+int	combinator(int max_24[4], char (*map)[SIZE][SIZE], char (*arr)[4][SIZE])
 {
 	while (max_24[0] < PERM_DIM)
 	{
@@ -80,10 +80,9 @@ void	combinator(int max_24[4], char (*map)[SIZE][SIZE], char (*arr)[4][SIZE])
 				set_row(g_perms[max_24[2]], (*map)[2]);
 				while (max_24[3] < PERM_DIM)
 				{
-					set_row(g_perms[max_24[3]], (*map)[3]);
+					set_row(g_perms[max_24[3]++], (*map)[3]);
 					if (check(arr, map))
-						return ;
-					max_24[3]++;
+						return (SUCCESS);
 				}
 				max_24[2]++;
 			}
@@ -91,6 +90,7 @@ void	combinator(int max_24[4], char (*map)[SIZE][SIZE], char (*arr)[4][SIZE])
 		}
 		max_24[0]++;
 	}
+	return (FAIL);
 }
 
 int	main(int argc, char *argv[])
@@ -102,7 +102,8 @@ int	main(int argc, char *argv[])
 		return (write(2, "Error\n", 6));
 	if (init_arg(&arr, argv[1]))
 		return (write(2, "Error\n", 6));
-	combinator((int [4]){0, 0, 0, 0}, &map, &arr);
+	if (combinator((int [4]){0, 0, 0, 0}, &map, &arr))
+		return (write(2, "Error\n", 6));
 	p_map(&map);
 	return (0);
 }
