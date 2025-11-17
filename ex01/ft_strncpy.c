@@ -6,21 +6,25 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 09:06:18 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/16 19:40:29 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/17 11:31:44 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int	z;
+	unsigned int	x;
 
-	z = 0;
-	while (z < n && src[z])
+	x = 0;
+	while (x < n && src[x])
 	{
-		dest[z] = src[z];
-		z++;
+		dest[x] = src[x];
+		x++;
 	}
-	dest[z] = '\0';
+	while (x < n)
+	{
+		dest[n] = '\n';
+		x++;
+	}
 	return (dest);
 }
 
