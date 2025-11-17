@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 15:36:27 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/16 19:39:58 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/17 13:56:01 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ void	ft_putstr_non_printable(char *str)
 		str++;
 	}
 }
-
-/*
-int	main(void)
-{
-	ft_putstr_non_printable("Hello\nHow are you?");
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 13:15:02 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/17 12:09:45 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/17 13:55:51 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,23 +42,3 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
-
-/*
-#include <unistd.h>
-
-void	ft_putstr(char *str)
-{
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-	}
-}
-
-int	main(void)
-{
-    char s1[] = "hi, how are you? 42words forty-two; fifty+and+one";
-	ft_putstr(ft_strcapitalize(s1));
-    return 0;
-}
-*/

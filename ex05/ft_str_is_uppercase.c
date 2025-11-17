@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 12:10:06 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/16 19:40:13 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/17 13:55:30 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,3 @@ int	ft_str_is_uppercase(char *str)
 	}
 	return (1);
 }
-/*
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-int	main(void)
-{
-    char s1[] = "H";
-	ft_putchar(ft_str_is_uppercase(s1) + 48);
-    return 0;
-}
-*/

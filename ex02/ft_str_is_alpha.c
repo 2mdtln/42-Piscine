@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 09:06:21 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/16 19:40:25 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/17 13:55:15 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,3 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
-
-/*
-v#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-int	main(void)
-{
-    char s1[] = "HelloZ";
-	ft_putchar(ft_str_is_alpha(s1) + 48);
-    return 0;
-}
-*/
