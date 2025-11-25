@@ -6,7 +6,7 @@
 /*   By: mtaheri <mtaheri@student.42istanbul.com.tr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 02:53:27 by mtaheri           #+#    #+#             */
-/*   Updated: 2025/11/25 03:38:42 by mtaheri          ###   ########.fr       */
+/*   Updated: 2025/11/25 08:43:12 by mtaheri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,26 @@
 
 int	ft_strlen(char *str)
 {
-	int	z;
+	int	i;
 
-	z = 0;
-	while (*str)
-	{
-		str++;
-		z++;
-	}
-	return (z);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
-char	*ft_strcpy(char *dest, char *src)
+char	*strcpym(char *dst, char *src)
 {
-	unsigned int	z;
+	int	i;
 
-	z = 0;
-	while (src[z])
+	i = 0;
+	while (src[i])
 	{
-		dest[z] = src[z];
-		z++;
+		dst[i] = src[i];
+		i++;
 	}
-	dest[z] = '\0';
-	return (dest);
+	dst[i] = 0;
+	return (dst + i);
 }
 
 int	ft_len_total(char **s, int n, int sep_len)
@@ -55,21 +52,25 @@ int	ft_len_total(char **s, int n, int sep_len)
 	return (total - sep_len);
 }
 
-char	*app(char *dst, char *src)
+char	*ft_empty(void)
 {
-	ft_strcpy(dst, src);
-	return (dst + ft_strlen(src));
+	char	*p;
+
+	p = malloc(1);
+	if (p)
+		p[0] = 0;
+	return (p);
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	int		full;
 	int		i;
-	char	*p;
 	char	*out;
+	char	*p;
 
 	if (size == 0)
-		return (malloc(1));
+		return (ft_empty());
 	full = ft_len_total(strs, size, ft_strlen(sep));
 	out = malloc(full + 1);
 	if (!out)
@@ -78,11 +79,11 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	i = 0;
 	while (i < size)
 	{
-		p = app(p, strs[i]);
+		p = strcpym(p, strs[i]);
 		if (i < size - 1)
-			p = app(p, sep);
+			p = strcpym(p, sep);
 		i++;
 	}
-	*p = '\0';
+	*p = 0;
 	return (out);
 }
